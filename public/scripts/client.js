@@ -66,6 +66,13 @@ $(document).ready(function() {
 
     const timeSincePosted = timeSince(tweet.created_at);
 
+    const escape = function(str) {
+      let div = document.createElement('div');
+      div.textContent = str;
+      // div.setAttribute('class', 'tweet-text');
+      return div.innerHTML;
+    }
+
     return `
   <article class="tweet-container">
   <header>
@@ -75,7 +82,7 @@ $(document).ready(function() {
   </div>
   <a href="#">${tweet.user.handle}</a>
   </header>
-  <div class="tweet-text">${tweet.content.text}</div>
+  <div class="tweet-text">${escape(tweet.content.text)}</div>
   <footer>
   <p class='tweet-time-posted'>${timeSincePosted} ago</p>
   <div class="tweet-right-footer">
