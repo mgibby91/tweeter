@@ -4,7 +4,7 @@ article.tweet-container {
   margin: 4rem 0;
   border: 5px solid #545149;
   padding: 1.75rem;
-  filter: blur(0.75px);
+  filter: blur(0.7px);
 }
 
 article.tweet-container:hover {
