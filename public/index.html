@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type='text/css' />
   <link rel="stylesheet" href="/styles/header.css" type='text/css' />
   <link rel="stylesheet" href="/styles/new-tweet.css" type='text/css' />
+  <link rel="stylesheet" href="/styles/tweet-post.css" type='text/css' />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -42,7 +43,7 @@
   </nav>
 
   <!-- Header content -->
-  <header>
+  <header id='header-showcase'>
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -65,7 +66,30 @@
         </div>
       </form>
     </section>
+
+    <article class="tweet-container">
+      <header>
+        <div class="tweet-left-header">
+          <img src="https://i.imgur.com/73hZDYK.png" alt="">
+          <p class='tweet-username'>Geoff Jeffries</p>
+        </div>
+        <a href="#">@DrJeffries</a>
+      </header>
+      <div class="tweet-text">Hello World!</div>
+      <footer>
+        <p class='tweet-time-posted'>10 days ago</p>
+        <div class="tweet-right-footer">
+          <a href="#"><i class="fas fa-flag"></i></a>
+          <a href="#"><i class="fas fa-retweet"></i></a>
+          <a href="#"><i class="fas fa-heart"></i></a>
+        </div>
+      </footer>
+    </article>
   </main>
+
+
+  <script src="./scripts/composer-char-counter.js"></script>
 </body>
+
 
 </html>

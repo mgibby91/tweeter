@@ -1,6 +1,6 @@
 
 
-header {
+header#header-showcase {
   height: 400px;
   width: 100v;
   display: flex;
@@ -12,12 +12,12 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
 }
 
-header div h2 {
+header#header-showcase div h2 {
   font-weight: 300;
   margin: 0;
   letter-spacing: 0.05rem;
 }
 
-header div h2 span {
+header#header-showcase div h2 span {
   font-weight: 600;
 }

@@ -1,7 +1,6 @@
-/* .new-tweet {
-  display: flex;
-  flex-direction: column;
-} */
+.new-tweet {
+  margin-top: 2rem;
+}
 
 .new-tweet form {
   margin-top: 0.5rem;
@@ -50,3 +49,5 @@
 .new-tweet form div button:focus {
   outline: none;
 }
+
+.counter-negative {color: rgb(253, 57, 57)}
