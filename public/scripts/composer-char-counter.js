@@ -21,10 +21,12 @@ $(document).ready(function() {
   // button display when scroll function
   const buttonDisplay = function() {
 
-    if ($(document).scrollTop() > 100) {
+    if ($(document).scrollTop() > 500) {
       scrollBtn.show();
+      $('#write-tweet-btn').hide();
     } else {
       scrollBtn.hide();
+      $('#write-tweet-btn').show();
     }
   }
 
@@ -34,6 +36,9 @@ $(document).ready(function() {
 
   const scrollPageTop = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(function() {
+      $('.new-tweet').slideDown();
+    }, 200);
   }
 
   scrollBtn.click(scrollPageTop);
