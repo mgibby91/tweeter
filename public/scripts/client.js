@@ -108,10 +108,15 @@ $(document).ready(function() {
     const data = $(this).serialize();
     const URL = $('.tweet-form').attr('action');
 
-    // if (!data.split('=')[1]) {
-    //   console.log('Cannot submit empty string');
-    //   return;
-    // }
+    if (!data.split('=')[1]) {
+      alert('Please enter text in tweet!');
+      return;
+    }
+
+    if (data.split('=')[1].length > 140) {
+      alert('Please stay within character limit!');
+      return;
+    }
 
     $.post(URL, data)
       .then(function() {
