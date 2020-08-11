@@ -105,12 +105,15 @@ $(document).ready(function() {
 
   // renderTweets(data);
 
-
+  const errorMessage = $('.error-message');
+  // change from 'none' to 'flex' right before hide so error doesn't flash on page refresh/load
+  errorMessage.css('display', 'flex');
+  // hide on load to use slideDown() in form submission function
+  errorMessage.hide();
 
   // Form submission
   const formSubmission = function(e) {
 
-    const errorMessage = $('.error-message');
     const errorText = errorMessage.children('p');
 
     e.preventDefault();
@@ -120,19 +123,22 @@ $(document).ready(function() {
 
     if (!data.split('=')[1]) {
       errorText.text('No characters provided. Please submit tweet with valid text!');
-      errorMessage.css('display', 'flex');
+      errorMessage.slideDown(300);
       return;
     }
 
     if (data.split('=')[1].length > 140) {
       errorText.text('Too many characters provided. Please submit tweet with valid text!');
-      errorMessage.css('display', 'flex');
+      errorMessage.slideDown(300);
       return;
     }
 
     $.post(URL, data)
       .then(function() {
         console.log('Success: ', data);
+        // slide error message back up before tweet submission
+        errorMessage.slideUp(200);
+
         // remove all tweet posts from tweets container
         $('#tweets-main-container').empty();
         // reset the textarea to empty
