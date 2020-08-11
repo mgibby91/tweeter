@@ -121,6 +121,14 @@ $(document).ready(function() {
     $.post(URL, data)
       .then(function() {
         console.log('Success: ', data);
+        // remove all tweet posts from tweets container
+        $('#tweets-main-container').empty();
+        // reset the textarea to empty
+        $('#tweet-text').val('');
+        // reset the counter back to 140
+        $('.counter').val(140);
+        // load tweets from DB
+        loadTweets();
       })
       .catch(function(error) {
         console.log('error: ', error)
