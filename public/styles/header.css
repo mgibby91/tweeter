@@ -3,6 +3,7 @@
 header#header-showcase {
   height: 400px;
   width: 100v;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;

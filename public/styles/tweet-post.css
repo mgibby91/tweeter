@@ -12,6 +12,7 @@ article.tweet-container:hover {
   filter: blur(0);
 }
 
+/* reveal the hidden a-tag */
 article.tweet-container:hover header a {
   display: flex;
 }

@@ -1,6 +1,10 @@
 nav {
   height: 120px;
-  width: 100vw;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden;
   background: #4056A1;
   color: #fff;
   display: flex;
