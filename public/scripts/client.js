@@ -132,7 +132,7 @@ $(document).ready(function() {
 
 
   // Fetch tweets from db in form of JSON
-  const loadTweets = function() {
+  function loadTweets() {
 
     $.ajax('/tweets', { method: 'GET' })
       .then(function(tweetsJSON) {
