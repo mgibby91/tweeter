@@ -55,7 +55,15 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+
     <section class="new-tweet">
+
+      <div class="error-message">
+        <i class="fas fa-exclamation-triangle fa-lg"></i>
+        <p>Some Text Here</p>
+        <i class="fas fa-exclamation-triangle fa-lg"></i>
+      </div>
+
       <h2>Compose Tweet</h2>
       <form method="POST" action="/tweets/" class='tweet-form'>
         <label for="tweet-text">What are you humming about?</label>
@@ -68,24 +76,7 @@
     </section>
 
     <div id="tweets-main-container">
-      <!-- <article class="tweet-container">
-        <header>
-          <div class="tweet-left-header">
-            <img src="https://i.imgur.com/73hZDYK.png" alt="">
-            <p class='tweet-username'>Geoff Jeffries</p>
-          </div>
-          <a href="#">@DrJeffries</a>
-        </header>
-        <div class="tweet-text">Hello World!</div>
-        <footer>
-          <p class='tweet-time-posted'>10 days ago</p>
-          <div class="tweet-right-footer">
-            <a href="#"><i class="fas fa-flag"></i></a>
-            <a href="#"><i class="fas fa-retweet"></i></a>
-            <a href="#"><i class="fas fa-heart"></i></a>
-          </div>
-        </footer>
-      </article> -->
+
     </div>
   </main>
 

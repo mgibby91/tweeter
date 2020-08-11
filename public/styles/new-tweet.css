@@ -51,3 +51,21 @@
 }
 
 .counter-negative {color: rgb(253, 57, 57)}
+
+
+/* Error message */
+.error-message {
+  border: 5px solid rgb(253, 57, 57);
+  margin: 0.5rem 0 2rem 0;
+  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+
+.error-message > * {
+  color:rgb(253, 57, 57);
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+

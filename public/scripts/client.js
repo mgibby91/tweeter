@@ -110,18 +110,23 @@ $(document).ready(function() {
   // Form submission
   const formSubmission = function(e) {
 
+    const errorMessage = $('.error-message');
+    const errorText = errorMessage.children('p');
+
     e.preventDefault();
 
     const data = $(this).serialize();
     const URL = $('.tweet-form').attr('action');
 
     if (!data.split('=')[1]) {
-      alert('Please enter text in tweet!');
+      errorText.text('No characters provided. Please submit tweet with valid text!');
+      errorMessage.css('display', 'flex');
       return;
     }
 
     if (data.split('=')[1].length > 140) {
-      alert('Please stay within character limit!');
+      errorText.text('Too many characters provided. Please submit tweet with valid text!');
+      errorMessage.css('display', 'flex');
       return;
     }
 
