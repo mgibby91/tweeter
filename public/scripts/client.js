@@ -149,12 +149,12 @@ $(document).ready(function() {
         loadTweets();
       })
       .catch(function(error) {
-        console.log('error: ', error)
+        console.log('error: ', error);
       })
 
   }
 
-  $('.tweet-form').submit(formSubmission)
+  $('.tweet-form').submit(formSubmission);
 
 
   // Fetch tweets from db in form of JSON
@@ -172,6 +172,15 @@ $(document).ready(function() {
 
   loadTweets();
 
+  // toggling form for entering tweet
 
+  const toggleTweetForm = function(e) {
+
+    const newTweet = $('.new-tweet');
+    newTweet.slideToggle();
+
+  }
+
+  $('#write-tweet-btn').click(toggleTweetForm);
 
 });

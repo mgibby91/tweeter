@@ -64,3 +64,31 @@ article.tweet-container footer .tweet-right-footer > * {
   margin-left: 0.5rem;
   color: #4056A1;
 }
+
+
+/* button for scrolling up quickly */
+#scroll-btn {
+  border: none;
+  text-decoration: none;
+  background: rgb(253, 57, 57);
+  border-radius: 50%;
+  color: #fff;
+  width: 90px;
+  height: 90px;
+  box-shadow: 3px 3px 6px rgb(150, 150, 150);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transform: scale(0.9);
+  display: none;
+}
+
+#scroll-btn:focus {
+  outline: none;
+}
+
+#scroll-btn:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgb(71, 71, 71);
+  transform: scale(1.0);
+}

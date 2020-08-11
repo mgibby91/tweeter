@@ -26,3 +26,7 @@ nav #write-tweet-btn {
 nav #write-tweet-btn #write-tweet-icon {
   color: rgb(253, 57, 57);
 }
+
+nav #write-tweet-btn:hover {
+  cursor: pointer;
+}
