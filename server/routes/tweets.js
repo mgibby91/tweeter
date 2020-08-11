@@ -1,9 +1,9 @@
 "use strict";
 
-const userHelper    = require("../lib/util/user-helper")
+const userHelper = require("../lib/util/user-helper")
 
-const express       = require('express');
-const tweetsRoutes  = express.Router();
+const express = require('express');
+const tweetsRoutes = express.Router();
 
 module.exports = function(DataHelpers) {
 
@@ -19,9 +19,10 @@ module.exports = function(DataHelpers) {
 
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
-      res.status(400).json({ error: 'invalid request: no data in POST body'});
+      res.status(400).json({ error: 'invalid request: no data in POST body' });
       return;
     }
+    console.log(req.body.text);
 
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
@@ -31,6 +32,8 @@ module.exports = function(DataHelpers) {
       },
       created_at: Date.now()
     };
+
+    console.log(tweet);
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
