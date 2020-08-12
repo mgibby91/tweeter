@@ -6,33 +6,6 @@
 
 $(document).ready(function() {
 
-
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd"
-  //     },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ];
-
   const timeSince = function(date) {
 
     let seconds = Math.floor((new Date() - date) / 1000);
@@ -69,7 +42,6 @@ $(document).ready(function() {
     const escape = function(str) {
       let div = document.createElement('div');
       div.textContent = str;
-      // div.setAttribute('class', 'tweet-text');
       return div.innerHTML;
     }
 
@@ -102,8 +74,6 @@ $(document).ready(function() {
       $('#tweets-main-container').append($tweet);
     }
   }
-
-  // renderTweets(data);
 
   const errorMessage = $('.error-message');
   // change from 'none' to 'flex' right before hide so error doesn't flash on page refresh/load
