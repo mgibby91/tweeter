@@ -30,3 +30,19 @@ nav #write-tweet-btn #write-tweet-icon {
 nav #write-tweet-btn:hover {
   cursor: pointer;
 }
+
+nav #write-tweet-icon {
+  animation: MoveUpDown 2s linear infinite;
+  position: relative;
+  left:0;
+  bottom:0;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: -10px;
+  }
+}
