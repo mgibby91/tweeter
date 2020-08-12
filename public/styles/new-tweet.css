@@ -42,7 +42,7 @@
 .new-tweet form div button:hover {
   cursor: pointer;
   /* transform: translateY(-2px); */
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   transition: 0.1s;
 }
 

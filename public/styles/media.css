@@ -1,0 +1,60 @@
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+  .header-main-media {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  #header-showcase {
+    width: 50%;
+    margin: 0 5%;
+  }
+
+  .container {
+    width: 50%;
+    margin: 0 5%;
+    margin-top: 80px;
+  }
+
+}
+
+/* Tablet styles */
+@media only screen and (max-width: 1024px) and (min-width: 550px) {
+
+  nav {
+    background: rgba(0,0,0,0);
+  }
+
+  header#header-showcase {
+    margin-top: 0;
+    height: 520px;
+  }
+
+}
+
+
+@media only screen and (max-width: 550px) {
+
+  nav {
+    background: rgba(0,0,0,0);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+  }
+
+  nav #page-title {
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  nav #write-tweet-btn {
+    margin-bottom: 1rem;
+  }
+
+  header#header-showcase {
+    margin-top: 0;
+    height: 680px;
+  }
+
+}
