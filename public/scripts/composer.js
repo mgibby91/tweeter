@@ -10,7 +10,7 @@ $(document).ready(function() {
     const counter = this.parentElement.children[2].children[1];
     counter.textContent = charLeft;
 
-    // change color to red when counter < 0 
+    // change color to red when counter < 0
     charLeft < 0 ? counter.classList.add('counter-negative') : counter.classList.remove('counter-negative');
   };
 
@@ -28,7 +28,7 @@ $(document).ready(function() {
       scrollBtn.hide();
       $('#write-tweet-btn').show();
     }
-  }
+  };
 
   $(window).scroll(buttonDisplay);
 
@@ -39,7 +39,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $('.new-tweet').slideDown();
     }, 200);
-  }
+  };
 
   scrollBtn.click(scrollPageTop);
 

@@ -33,7 +33,7 @@ $(document).ready(function() {
     }
     return Math.floor(seconds) + " seconds";
 
-  }
+  };
 
   const createTweetElement = function(tweet) {
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
       let div = document.createElement('div');
       div.textContent = str;
       return div.innerHTML;
-    }
+    };
 
     return `
   <article class="tweet-container">
@@ -66,14 +66,14 @@ $(document).ready(function() {
   </article>
   `;
 
-  }
+  };
 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-main-container').append($tweet);
     }
-  }
+  };
 
   const errorMessage = $('.error-message');
   // change from 'none' to 'flex' right before hide so error doesn't flash on page refresh/load
@@ -120,9 +120,9 @@ $(document).ready(function() {
       })
       .catch(function(error) {
         console.log('error: ', error);
-      })
+      });
 
-  }
+  };
 
   $('.tweet-form').submit(formSubmission);
 
@@ -138,7 +138,7 @@ $(document).ready(function() {
         console.log('Error!', err);
       });
 
-  };
+  }
 
   loadTweets();
 
@@ -149,7 +149,7 @@ $(document).ready(function() {
     const newTweet = $('.new-tweet');
     newTweet.slideToggle();
 
-  }
+  };
 
   $('#write-tweet-btn').click(toggleTweetForm);
 
