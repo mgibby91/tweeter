@@ -8,7 +8,7 @@ This was forked and cloned from the LHL-owned repository. This app is intended t
 
 !["Screenshot of user composing a tweet"](https://github.com/mgibby91/tweeter/blob/master/docs/tweeter-compose-tweet.png)
 !["Screenshot of going over character limit"](https://github.com/mgibby91/tweeter/blob/master/docs/tweeter-mobile-responsive.png)
-!["Screenshot of mobile-responsiveness"]('https://github.com/mgibby91/tweeter/blob/master/docs/tweeter-compose-tweet.png)
+!["Screenshot of mobile-responsiveness"](https://github.com/mgibby91/tweeter/blob/master/docs/tweeter-compose-tweet.png)
 
 ## Getting Started
 
