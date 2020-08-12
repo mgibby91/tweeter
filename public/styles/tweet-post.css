@@ -86,6 +86,8 @@ article.tweet-container header a {
 article.tweet-container .tweet-text {
   padding: 3.25rem 1.25rem;
   border-bottom: 5px solid #545149;
+  word-wrap: break-word;
+  /* overflow: auto; */
 }
 
 article.tweet-container footer {

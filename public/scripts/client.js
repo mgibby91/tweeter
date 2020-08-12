@@ -127,7 +127,7 @@ $(document).ready(function() {
       return;
     }
 
-    if (data.split('=')[1].length > 140) {
+    if ($(this)[0][0].value.length > 140) {
       errorText.text('Too many characters provided. Please submit tweet with valid text!');
       errorMessage.slideDown(300);
       return;

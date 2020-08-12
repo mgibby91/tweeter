@@ -7,6 +7,7 @@ article.tweet-container {
   border: 5px solid layout.$color-dark;
   padding: 1.75rem;
   filter: blur(0.7px);
+  max-width: 100%;
 }
 
 article.tweet-container:hover {
@@ -53,6 +54,7 @@ article.tweet-container header a {
 article.tweet-container .tweet-text {
   padding: 3.25rem 1.25rem;
   border-bottom: 5px solid layout.$color-dark;
+  word-wrap: break-word;
 }
 
 article.tweet-container footer {
