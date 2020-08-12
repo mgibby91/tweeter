@@ -1,49 +1,16 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Global layout stuff
- */
-/* SASS Variables */
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-main {
-  width: 90%;
-  margin: 0 auto;
-  background: inherit;
-}
+@use 'layout';
 
 article.tweet-container {
   display: flex;
   flex-direction: column;
   margin: 4rem 0;
-  border: 5px solid #545149;
+  border: 5px solid layout.$color-dark;
   padding: 1.75rem;
   filter: blur(0.7px);
 }
 
 article.tweet-container:hover {
-  box-shadow: 10px 10px 0 #b4b4b4;
+  box-shadow: 10px 10px 0 rgb(180, 180, 180);
   filter: blur(0);
 }
 
@@ -79,37 +46,38 @@ article.tweet-container header .tweet-left-header img {
 
 article.tweet-container header a {
   text-decoration: none;
-  color: #b4b4b4;
+  color: rgb(180, 180, 180);
   display: none;
 }
 
 article.tweet-container .tweet-text {
   padding: 3.25rem 1.25rem;
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid layout.$color-dark;
 }
 
 article.tweet-container footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.25rem;
-  font-size: 1rem;
+  font-size: 1.0rem;
 }
 
 article.tweet-container footer .tweet-right-footer > * {
   margin-left: 0.5rem;
-  color: #4056A1;
+  color: layout.$color-nav;
 }
+
 
 /* button for scrolling up quickly */
 #scroll-btn {
   border: none;
   text-decoration: none;
-  background: #fd3939;
+  background: layout.$color-warning;
   border-radius: 50%;
   color: #fff;
   width: 90px;
   height: 90px;
-  box-shadow: 3px 3px 6px #969696;
+  box-shadow: 3px 3px 6px rgb(150, 150, 150);
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -123,8 +91,6 @@ article.tweet-container footer .tweet-right-footer > * {
 
 #scroll-btn:hover {
   cursor: pointer;
-  box-shadow: 3px 3px 8px #474747;
-  transform: scale(1);
+  box-shadow: 3px 3px 8px rgb(71, 71, 71);
+  transform: scale(1.0);
 }
-
-/*# sourceMappingURL=tweet-post.css.map */

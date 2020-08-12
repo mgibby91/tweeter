@@ -1,37 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Global layout stuff
- */
-/* SASS Variables */
-body {
-  color: #545149;
-  background-color: #f4f1ec;
-  font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-main {
-  width: 90%;
-  margin: 0 auto;
-  background: inherit;
-}
+@use 'layout';
 
 .new-tweet {
   margin-top: 2rem;
@@ -46,14 +13,13 @@ main {
 .new-tweet form textarea {
   height: 22px;
   border: none;
-  border-bottom: 5px solid #545149;
+  border-bottom: 5px solid layout.$color-dark;
   padding-bottom: 3rem;
   font-size: 1.25rem;
   background: inherit;
   margin: 0.5rem 0;
   overflow: hidden;
   font-family: inherit;
-  /* color: inherit; */
 }
 
 .new-tweet form textarea:focus {
@@ -64,19 +30,18 @@ main {
   margin-top: 0.6rem;
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", cursive;
+  font-family: 'Bungee', cursive;
 }
 
 .new-tweet form div button {
   color: #fff;
-  background: #4056A1;
+  background: layout.$color-nav;
   padding: 0.35rem 0.7rem;
   border: none;
 }
 
 .new-tweet form div button:hover {
   cursor: pointer;
-  /* transform: translateY(-2px); */
   transform: translateY(-3px);
   transition: 0.1s;
 }
@@ -85,13 +50,12 @@ main {
   outline: none;
 }
 
-.counter-negative {
-  color: #fd3939;
-}
+.counter-negative {color: layout.$color-warning}
+
 
 /* Error message */
 .error-message {
-  border: 5px solid #fd3939;
+  border: 5px solid layout.$color-warning;
   margin: 0.5rem 0 2rem 0;
   display: none;
   justify-content: space-evenly;
@@ -104,9 +68,8 @@ main {
 }
 
 .error-message > * {
-  color: #fd3939;
+  color:layout.$color-warning;
   font-size: 1.75rem;
   font-weight: 400;
 }
 
-/*# sourceMappingURL=new-tweet.css.map */

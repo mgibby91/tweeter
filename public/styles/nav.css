@@ -1,3 +1,38 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Global layout stuff
+ */
+/* SASS Variables */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  width: 90%;
+  margin: 0 auto;
+  background: inherit;
+}
+
 nav {
   height: 120px;
   width: 100%;
@@ -13,7 +48,7 @@ nav {
 }
 
 nav #page-title {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 2em;
 }
 
@@ -24,7 +59,7 @@ nav #write-tweet-btn {
 }
 
 nav #write-tweet-btn #write-tweet-icon {
-  color: rgb(253, 57, 57);
+  color: #fd3939;
 }
 
 nav #write-tweet-btn:hover {
@@ -34,8 +69,8 @@ nav #write-tweet-btn:hover {
 nav #write-tweet-icon {
   animation: MoveUpDown 2s linear infinite;
   position: relative;
-  left:0;
-  bottom:0;
+  left: 0;
+  bottom: 0;
 }
 
 @keyframes MoveUpDown {
@@ -46,3 +81,5 @@ nav #write-tweet-icon {
     bottom: -10px;
   }
 }
+
+/*# sourceMappingURL=nav.css.map */
